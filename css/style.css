@@ -1,0 +1,317 @@
+
+:root {
+  --primary: #ff6b8b;
+  --primary-hover: #ff477e;
+  --secondary: #2ec4b6;
+  --secondary-dark: #20a497;
+  --bg-main: #fff5f8;
+  --bg-card: #ffffff;
+  --text-dark: #2d3748;
+  --text-muted: #4a5568;
+
+  --font-xs: 0.85rem;
+  --font-sm: 1rem;
+  --font-md: 1.1rem;
+  --font-lg: 1.8rem;
+  --font-xl: 2.2rem;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3.5rem;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(135deg, #ff85a2 0%, var(--primary) 100%);
+  color: var(--bg-card);
+  padding: var(--space-sm) var(--space-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(255, 107, 139, 0.2);
+}
+
+header .logo h1 {
+  font-size: var(--font-lg);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--bg-card);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: var(--space-md);
+}
+
+header nav a {
+  color: var(--bg-card);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+header nav a.active, 
+header nav a:hover {
+  background-color: var(--secondary);
+  color: var(--bg-card);
+  box-shadow: 0 2px 8px rgba(46, 196, 182, 0.4);
+}
+
+main {
+  max-width: 1000px;
+  margin: 2.5rem auto;
+  padding: 0 1.2rem;
+}
+
+
+.hero {
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+  color: var(--bg-card);
+  padding: var(--space-xl) var(--space-lg);
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 8px 20px rgba(46, 196, 182, 0.25);
+}
+
+.hero h2 {
+  font-size: var(--font-xl);
+  margin-bottom: var(--space-sm);
+}
+
+.hero p {
+  font-size: var(--font-md);
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.95;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary);
+  color: var(--bg-card);
+  padding: 0.9rem 1.8rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  margin-top: var(--space-md);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 107, 139, 0.3);
+}
+
+.btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 71, 126, 0.4);
+}
+
+
+.sobre h2, .impacto h2, .iniciativas h2, .form-container h2 {
+  color: var(--primary-hover);
+  font-size: var(--font-lg);
+  margin-bottom: var(--space-sm);
+  position: relative;
+  display: inline-block;
+}
+
+.sobre h2 {
+  display: block;
+  margin-bottom: var(--space-md);
+}
+
+.container-img {
+  width: 100%;
+  max-width: 500px;
+  margin: var(--space-sm) auto var(--space-md) auto;
+}
+
+.container-img img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 3px solid var(--secondary);
+  box-shadow: 0 6px 15px rgba(255, 107, 139, 0.2);
+  display: block;
+}
+
+.img-sobre {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: var(--space-sm) 0;
+  border: 2px solid #ffe3ec;
+}
+
+.pilares, .grid-projetos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+  margin-top: 1.8rem;
+}
+
+article {
+  background: var(--bg-card);
+  padding: 1.8rem;
+  border-radius: 14px;
+  border: 2px solid #ffe3ec;
+  box-shadow: 0 4px 12px rgba(255, 133, 162, 0.08);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+article:hover {
+  transform: translateY(-4px);
+  border-color: var(--secondary);
+}
+
+article h3 {
+  color: var(--secondary);
+  margin-bottom: 0.8rem;
+}
+
+.card-projeto .status {
+  display: inline-block;
+  margin-top: var(--space-sm);
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: var(--font-xs);
+  font-weight: bold;
+}
+
+.status.em-andamento {
+  background-color: #ffe3ec;
+  color: var(--primary-hover);
+}
+
+.status.continuo {
+  background-color: #e0f7f5;
+  color: var(--secondary-dark);
+}
+
+.impacto {
+  margin-top: 3rem;
+  background: var(--bg-card);
+  padding: var(--space-lg);
+  border-radius: 16px;
+  border-left: 6px solid var(--primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.impacto ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  margin-top: var(--space-sm);
+}
+
+.impacto li {
+  font-size: var(--font-md);
+}
+
+.impacto li strong {
+  color: var(--secondary);
+  font-size: 1.5rem;
+  display: block;
+}
+
+
+.form-container {
+  background: var(--bg-card);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(255, 107, 139, 0.1);
+  border: 1px solid #ffe3ec;
+}
+
+fieldset {
+  border: 2px dashed #ffb3c6;
+  padding: 1.8rem;
+  margin-bottom: 1.8rem;
+  border-radius: 12px;
+  background-color: #fffbfd;
+}
+
+legend {
+  padding: 0 0.8rem;
+  font-weight: bold;
+  color: var(--secondary);
+  font-size: var(--font-md);
+}
+
+.field-group {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.field-group label {
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.field-group input, 
+.field-group select {
+  padding: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: var(--font-sm);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.field-group input:focus, 
+.field-group select:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(46, 196, 182, 0.2);
+}
+
+aside.como-ajudar {
+  background: #e0f7f5;
+  padding: var(--space-lg);
+  border-radius: 14px;
+  margin-top: 2.5rem;
+  border: 2px solid var(--secondary);
+  text-align: center;
+}
+
+aside.como-ajudar h3 {
+  color: var(--secondary-dark);
+  margin-bottom: var(--space-xs);
+}
+
+footer {
+  text-align: center;
+  padding: var(--space-lg);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
+  color: var(--bg-card);
+  margin-top: 4rem;
+}
+
+footer a {
+  color: #e0f7f5;
+  font-weight: bold;
+}
